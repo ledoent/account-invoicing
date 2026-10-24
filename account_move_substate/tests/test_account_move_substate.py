@@ -7,6 +7,12 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestAccountMoveSubstate(BaseCommon):
+    # BaseCommon runs as an independent user carrying only base.group_user,
+    # so every account.move read raised AccessError on 20.0. The accounting
+    # group is what this suite actually needs; granting it here is the class
+    # hook BaseCommon provides for exactly this.
+    _test_user_groups = ("base.group_user", "account.group_account_manager")
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()

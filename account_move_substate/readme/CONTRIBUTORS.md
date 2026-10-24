@@ -3,3 +3,4 @@
 - [360ERP](https://360ERP.com):
   - Bosd \<bosd\>
   - Kevin Khao \<kevinkhao@gmail.com\>
+- Don Kendall \<dkendall@ledoweb.com\>
